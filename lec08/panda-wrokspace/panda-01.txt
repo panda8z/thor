@@ -1,0 +1,64 @@
+alright last time I started talking about linearize ability and I want to finish up this time.
+the reason why we're talking about it again is that it's our kind of standard definition for what strong consistency means in storage style systems 
+so for example lab 3 is a needs to obey your lab 3 needs to be linearizable and sometimes this will come up 
+because we're talking about a strongly consistent system 
+and we're wondering whether a particular behavior is acceptable 
+and other times linearize ability will become come up
+because we'll be talking about a system that isn't linearizable 
+and we'll be wondering you know in what ways might it fall short or deviate from linearize ability 
+so one thing you need to be able to do is look at a particular sequence of operations 
+a particular execution of some system that executes reads and writes like your lab 3 and be able to answer the question
+was that Stevens of operations I just saw linearizable or not 
+I'm so we're going to continue practicing that a little bit 
+now plus 
+I'll try to actually establish some interesting facts that will be helpful for us about what it means about the consequences for the systems 
+we build and look at linearize ability is to find on particular operation history 
+so always the thing we're talking about is 
+we observed a sequence of requests by clients and then they got some responses at different times and they asked for different  
+you know to read different data and got various answers back 
+you know is that history that we saw linearizable ok 
+so here's an example of a history that might or might not be linearized able 
+so let's suppose at some point in time some client groups of times gonna move to the right 
+this vertical bar marks the time at which a client sent a request 
+I'm gonna use this notation to mean that the request is a write and asks to set variable or key or whatever x2 value 0 
+so sort of a key and a value 
+this would correspond to a put of key X and by zero in lab 3 
+and then this is sort of we're watching what the client send the client sent this request to our service
+and at some point the service responded and said yes you're right is completed 
+so we're assuming the services of a nature that actually tells you when the write completes otherwise the definition isn't very useful 
+ok so we have this request by somebody to write and then I'm imagining in this example there's another request that because I'm putting this mark here 
+this means the second request started after the first request finished 
+and and you know reason why that's important 
+is because of this rule that linearizable history must match real time 
+and what that really means is that requests that are known in real time to have started after some other request finished 
+the second request has to occur after the first request in whatever order we work out 
+that's the proof 
+that the history was a linearized linearize available
+ok so in this example I'm imagining there's another request that asks to write X to have value 1 
+and then a concurrent request may be started a little bit later as to set X to 2 
+I said now we have two maybe two different clients issued requests at about the same time to set X to two different values 
+so of course we're wondering which one is going to be the real value 
+and then we also have some reads 
+if all you have is writes well well 
+you have us right 
+so it's it's hard to say too much about linearizable linearize ability 
+because you don't know you don't have any proof that the system actually did anything or revealed any values 
+so we really need reads 
+so let's imagine we have some read unless you'll be seeing our in the history that a client said to read at this time and the second time 
+it got an answer for red key accent got value to
+ so presumably actually saw this value and then there was another request by maybe the same client or a different client 
+ but known to have started in time after this request finished and this read of X got value while 
+and so the question in front of us is is this history linearizable
+and there's sort of two strategies 
+we can take 
+we can either cook up a sequence 
+because if we can come up with a total order of these five operations that obeys real time 
+and in which each read sees the value written by the priest most recently proceeding right in the order 
+if we can come up with that order 
+then that's a proof the history is linearizable 
+another strategy is to observe that these rules each one may imply certain 
+this comes before that edges in a graph and if we can find a cycle in this operation must come before that operation 
+we can find a psych on that graph and that's proof that the history isn't linearizable 
+and for small histories we may actually be able to enumerate every single order
+ and use that show this history isn't linearizable anyway  any thoughts about whether this might be or might not be linearizable 
+ yes yes 
