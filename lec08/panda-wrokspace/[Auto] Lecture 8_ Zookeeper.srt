@@ -21,121 +21,148 @@ talking about it again is that it's our
 5
 00:00:11,660 --> 00:00:14,000
 kind of standard definition for what
-这是关于存储一致性系统
+这是关于存储一致性系统中
 
 6
 00:00:14,000 --> 00:00:19,039
 strong consistency means in storage
-中强一致性的标准定义
+强一致性的标准定义
 
 7
 00:00:19,039 --> 00:00:23,079
 style systems so for example lab 3 is a
-因此例如实验3是，
+例如实验3，
+
 8
 00:00:23,079 --> 00:00:28,369
 needs to obey your lab 3 needs to be
-满足你的实验3的需求需要线性化
+实验3就需要线性化
 
 9
 00:00:28,369 --> 00:00:31,369
 linearizable and sometimes this will
+线性化之所以有时会出现
 
 10
 00:00:31,369 --> 00:00:32,930
 come up because we're talking about a
+是因为我们在讨论
 
 11
 00:00:32,930 --> 00:00:34,310
 strongly consistent system and we're
+一个高度一致的系统
 
 12
 00:00:34,310 --> 00:00:35,360
 wondering whether a particular behavior
+并且 我们想知道某个特定行为
 
 13
 00:00:35,360 --> 00:00:39,170
 is acceptable and other times linearize
+是否可以接受 
 
 14
 00:00:39,170 --> 00:00:40,760
 ability will become come up because
+而其他时候线性化能力会出现
 
 15
 00:00:40,760 --> 00:00:42,140
 we'll be talking about a system that
 
+因为我们我们将要讨论的
+
 16
 00:00:42,140 --> 00:00:44,000
 isn't linearizable and we'll be
+是一个不可线性化的系统
 
 17
 00:00:44,000 --> 00:00:47,150
 wondering you know in what ways might it
+我们想知道会以什么方式
 
 18
 00:00:47,150 --> 00:00:49,520
 fall short or deviate from linearize
+达到或偏离线性化能力
 
 19
 00:00:49,520 --> 00:00:51,350
 ability so one thing you need to be able
+因此你需要做的一件事
 
 20
 00:00:51,350 --> 00:00:55,160
 to do is look at a particular sequence
+是查看特定的操作序列
 
 21
 00:00:55,160 --> 00:00:59,150
 of operations a particular execution of
+像你的实验3这样执行读写的系统的特定执行
 
 22
 00:00:59,150 --> 00:01:00,950
 some system that executes reads and
+像你的实验3这样执行读写的系统的特定执行
 
 23
 00:01:00,950 --> 00:01:03,260
 writes like your lab 3 and be able to
+像你的实验3这样执行读写的系统的特定执行
 
 24
 00:01:03,260 --> 00:01:04,699
 answer the question oh was that was that
+并且能够回答这个问题
 
 25
 00:01:04,699 --> 00:01:06,609
 Stevens of operations I just saw
+那是史蒂文斯（Stevens）的运算
 
 26
 00:01:06,609 --> 00:01:10,490
 linearizable or not I'm so we're going
+我只是看到线性化还是不线性
 
 27
 00:01:10,490 --> 00:01:11,929
 to continue practicing that a little bit
+所以我们将继续练习一下
 
 28
 00:01:11,929 --> 00:01:16,549
 now plus I'll try to actually establish
+再加上一些尝试
 
 29
 00:01:16,549 --> 00:01:17,719
 some interesting facts that will be
+我将尝试建立一些有趣的实例
 
 30
 00:01:17,719 --> 00:01:19,789
 helpful for us about what it means about
+这将有助于我们了解所构建系统的后果并了解线性化能力
 
 31
 00:01:19,789 --> 00:01:21,829
 the consequences for the systems we
+这将有助于我们了解所构建系统的后果并了解线性化能力
 
 32
 00:01:21,829 --> 00:01:26,630
 build and look at linearize ability is
+这将有助于我们了解所构建系统的后果并了解线性化能力
 
 33
 00:01:26,630 --> 00:01:28,729
 to find on particular operation history
+这是根据特定的操作历史来寻找的
 
 34
 00:01:28,729 --> 00:01:31,429
