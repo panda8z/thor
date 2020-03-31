@@ -529,102 +529,125 @@ front of us is is this history
 107
 00:04:52,900 --> 00:04:55,300
 linearizable and there's sort of two
+我们可以采取两种策略来制定一个序列
 
 108
 00:04:55,300 --> 00:04:58,450
 strategies we can take we can either
+我们可以采取两种策略来制定一个序列
 
 109
 00:04:58,450 --> 00:05:00,820
 cook up a sequence because if we can
+因为如果我们能得出这五个符合实时和在这种情况下
 
 110
 00:05:00,820 --> 00:05:03,700
 come up with a total order of these five
-
+因为如果我们能得出这五个符合实时和在这种情况下
 111
 00:05:03,700 --> 00:05:06,790
 operations that obeys real time and in
+如果我们能够提出该命令
 
 112
 00:05:06,790 --> 00:05:09,400
 which each read sees the value written
+则每个读取都可以看到该牧师
 
 113
 00:05:09,400 --> 00:05:12,400
 by the priest most recently proceeding
+最近执行的命令所写的值
 
 114
 00:05:12,400 --> 00:05:13,690
 right in the order if we can come up
+如果我们可以跟得上那种顺序
 
 115
 00:05:13,690 --> 00:05:15,490
 with that order then that's a proof the
+如果我们可以跟得上那种顺序
 
 116
 00:05:15,490 --> 00:05:17,770
 history is linearizable another strategy
+那就证明历史是线性的
 
 117
 00:05:17,770 --> 00:05:23,140
 is to observe that these rules each one
-
+另一种策略是观察这些规则
 118
 00:05:23,140 --> 00:05:26,730
 may imply certain this comes before that
+另一种策略是观察这些规则
 
 119
 00:05:26,730 --> 00:05:29,800
 edges in a graph and if we can find a
+每个规则都可能意味着一定要先确定在图的边缘
 
 120
 00:05:29,800 --> 00:05:32,140
 cycle in this operation must come before
+每个规则都可能意味着一定要先确定在图的边缘
 
 121
 00:05:32,140 --> 00:05:33,970
 that operation we can find a psych on
+如果我们能够在该操作中找到一个周期
 
 122
 00:05:33,970 --> 00:05:35,980
 that graph and that's proof that the
+必须在该操作之前发生，能够证明
 
 123
 00:05:35,980 --> 00:05:39,040
 history isn't linearizable and for small
+历史记录不是可线性化的
 
 124
 00:05:39,040 --> 00:05:40,240
 histories we may actually be able to
+对于一些小的历史记录我们实际上
 
 125
 00:05:40,240 --> 00:05:42,280
 enumerate every single order and use
+可以枚举每一个信号并显示他们
 
 126
 00:05:42,280 --> 00:05:45,550
 that show this history isn't
+这就是说历史记录
 
 127
 00:05:45,550 --> 00:05:51,280
 linearizable anyway any any any thoughts
+无论如何都无法线性化
 
 128
 00:05:51,280 --> 00:05:53,980
 about whether this might be or might not
+这就是线性化和非线性化
 
 129
 00:05:53,980 --> 00:05:56,730
 be linearizable
+这就是线性化和非线性化
 
 130
 00:06:00,410 --> 00:06:03,130
 yes
+好的
 
 131
 00:06:08,330 --> 00:06:11,330
 yes okay so the observation is that um
+
 
 132
 00:06:11,330 --> 00:06:15,560
