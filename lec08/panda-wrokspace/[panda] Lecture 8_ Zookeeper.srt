@@ -647,83 +647,99 @@ yes
 131
 00:06:08,330 --> 00:06:11,330
 yes okay so the observation is that um
-
+所以观察到的是
 
 132
 00:06:11,330 --> 00:06:15,560
 it's a little bit troubling that we saw
+我们看到使用IU进行读取有点麻烦
 
 133
 00:06:15,560 --> 00:06:17,330
 read with IU - and then the read with
+我们看到使用IU进行读取有点麻烦
 
 134
 00:06:17,330 --> 00:06:21,099
 value want and maybe that contradicts
+然后使用了value读取的值
 
 135
 00:06:21,099 --> 00:06:23,210
 you know there were two rights one with
+这可能有些矛盾
 
 136
 00:06:23,210 --> 00:06:25,490
 value one on one value - so that so we
+有两个正确的一对一的值
 
 137
 00:06:25,490 --> 00:06:26,840
 certainly if we had to read with value
+所以我们确定的是 如果我们读取的值三
 
 138
 00:06:26,840 --> 00:06:28,970
 three that would obviously be something
-
+这显然有一些麻烦
 139
 00:06:28,970 --> 00:06:31,159
 I got terribly wrong you know but we got
+我犯了严重的错误 
 
 140
 00:06:31,159 --> 00:06:32,720
 there were a right of one in two and a
+但是这里我们得到了一个正确的值二分之一
 
 141
 00:06:32,720 --> 00:06:34,849
 read of one and two so the question is
+和一个1和2的读操作
 
 142
 00:06:34,849 --> 00:06:36,470
 whether this order of reads could
+所以 问题是这个顺序读取
 
 143
 00:06:36,470 --> 00:06:39,349
 possibly be reconciled with the way
+在历史记录中是否能够和两个正确的值的显示方式一致
 
 144
 00:06:39,349 --> 00:06:43,030
 these two rights show up in the history
+在历史记录中是否能够和两个正确的值的显示方式一致
 
 145
 00:06:59,289 --> 00:07:04,580
 okay so what I'm what I'm the game we're
+好的 所以 我们现在玩的游戏是什么样呢
 
 146
 00:07:04,580 --> 00:07:07,520
 playing is that we have a like maybe two
+是这样的 我们有两个或三个客户端 
 
 147
 00:07:07,520 --> 00:07:08,960
 clients or three clients and they're
+并且他们正在和服务器交谈
 
 148
 00:07:08,960 --> 00:07:10,789
 talking some service you know maybe a
-
+可能 他们谈论的还是去年的事情
 149
 00:07:10,789 --> 00:07:12,710
 raft last year something and what we are
-
+可能 他们谈论的还是去年的事情
 150
 00:07:12,710 --> 00:07:15,529
 seeing is requests and responses right
+然后我们就看到了正确的回复
 
 151
 00:07:15,529 --> 00:07:18,259
